@@ -2,8 +2,7 @@
 
 ## Description
 
-Handling verification of Node Operator functions, WNS ecosystem transactions, account registration, and much more.
-
+Listens to `submitmsg` actions, triggers Mutagent-ai services, and executes `finalizemsg` actions to provide Mutagent response back to the suer
 ### Clone
 
 ```bash
