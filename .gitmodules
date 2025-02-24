@@ -1,0 +1,3 @@
+[submodule "addons/node-abieos"]
+	path = addons/node-abieos
+	url = https://github.com/Wire-Network/node-abieos/

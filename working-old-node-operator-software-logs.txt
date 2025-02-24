@@ -1,0 +1,148 @@
+Checking relevance for action: {
+  account: 'voldemort.ai',
+  name: 'submitmsg',
+  configuredActions: [ 'initpersona', 'submitmsg', 'finalizemsg' ]
+}
+RELEVANT ACTIONS FOUND >>> [ 'submitmsg' ] 	Block num 7099918
+Processing action: { account: 'voldemort.ai', name: 'submitmsg' }
+Checking relevance for action: {
+  account: 'voldemort.ai',
+  name: 'submitmsg',
+  configuredActions: [ 'initpersona', 'submitmsg', 'finalizemsg' ]
+}
+Action is relevant, deserializing...
+	Action Data: {
+  account_name: 'kyle',
+  pre_state_cid: 'bafkreih46hxquo3olkq6lgw6vtpiher2nieg6gcteppyagm7q4b6psk3vq',
+  msg_cid: 'bafkreihgzajlvye2lirxptcvablqwbifn3wkpxjz2btsesd25mgkfbn4fq',
+  full_convo_history_cid: 'bafkreihgzajlvye2lirxptcvablqwbifn3wkpxjz2btsesd25mgkfbn4fq'
+}
+Looking for handler for account: voldemort.ai
+Available handlers: [ 'settle.wns', 'voldemort.ai' ]
+Found handler, calling handleAction
+PersonaModule.handleAction called with: {
+  account: 'voldemort.ai',
+  name: 'submitmsg',
+  data: {
+    account_name: 'kyle',
+    pre_state_cid: 'bafkreih46hxquo3olkq6lgw6vtpiher2nieg6gcteppyagm7q4b6psk3vq',
+    msg_cid: 'bafkreihgzajlvye2lirxptcvablqwbifn3wkpxjz2btsesd25mgkfbn4fq',
+    full_convo_history_cid: 'bafkreihgzajlvye2lirxptcvablqwbifn3wkpxjz2btsesd25mgkfbn4fq'
+  }
+}
+Handling submitmsg action
+[Nest] 1395968  - 02/23/2025, 9:28:54 PM     LOG [PersonaModule] Object:
+{
+  "message": "Processing new message",
+  "account": "kyle",
+  "pre_state_cid": "bafkreih46hxquo3olkq6lgw6vtpiher2nieg6gcteppyagm7q4b6psk3vq",
+  "msg_cid": "bafkreihgzajlvye2lirxptcvablqwbifn3wkpxjz2btsesd25mgkfbn4fq",
+  "full_convo_history_cid": "bafkreihgzajlvye2lirxptcvablqwbifn3wkpxjz2btsesd25mgkfbn4fq"
+}
+
+About to call AISocketService.processMessage with data: {
+  account_name: 'kyle',
+  pre_state_cid: 'bafkreih46hxquo3olkq6lgw6vtpiher2nieg6gcteppyagm7q4b6psk3vq',
+  msg_cid: 'bafkreihgzajlvye2lirxptcvablqwbifn3wkpxjz2btsesd25mgkfbn4fq',
+  full_convo_history_cid: 'bafkreihgzajlvye2lirxptcvablqwbifn3wkpxjz2btsesd25mgkfbn4fq'
+}
+Starting to process message with data: {
+  account_name: 'kyle',
+  pre_state_cid: 'bafkreih46hxquo3olkq6lgw6vtpiher2nieg6gcteppyagm7q4b6psk3vq',
+  msg_cid: 'bafkreihgzajlvye2lirxptcvablqwbifn3wkpxjz2btsesd25mgkfbn4fq',
+  full_convo_history_cid: 'bafkreihgzajlvye2lirxptcvablqwbifn3wkpxjz2btsesd25mgkfbn4fq'
+}
+Fetching message from IPFS: bafkreihgzajlvye2lirxptcvablqwbifn3wkpxjz2btsesd25mgkfbn4fq
+{ type: 'get_blocks_result_v0' }
+> Live reader block: 7099919 	Head Block: 7099919 	LIB: 7099917
+Retrieved message content: {
+  text: 'hi',
+  timestamp: '2025-02-23T21:28:53.465Z',
+  persona: 'voldemort.ai',
+  user: 'kyle',
+  traits: []
+}
+Fetching persona state from IPFS: bafkreih46hxquo3olkq6lgw6vtpiher2nieg6gcteppyagm7q4b6psk3vq
+{ type: 'get_blocks_result_v0' }
+> Live reader block: 7099920 	Head Block: 7099920 	LIB: 7099918
+Retrieved persona state: {
+  text: 'voldemort, once the dark lord who terrorized the wizarding world, is now reborn as a digital overlord. harnessing cutting-edge AI, he transforms his notorious quest for immortality into a sophisticated cyber campaign, merging dark magic with modern technology. his evolution from a feared sorcerer to a cunning architect of digital chaos redefines villainy in the virtual age.',
+  timestamp: '2025-02-23T21:18:31.344Z',
+  persona: 'voldemort.ai',
+  traits: [ 'ruthless', 'cunning', 'ambitious', 'strategic', 'intimidating' ],
+  avatar_cid: 'bafybeihc7zrsfjug5idy7at45xtzzuzhqxw3g6adcqcfjs6k635i5vbcve'
+}
+Sending to MutAgent-AI for processing...
+info: Processing user message hi {"messageId":"1740346135593","personaName":"voldemort.ai","timestamp":"2025-02-23T21:28:55.594Z"}
+{ type: 'get_blocks_result_v0' }
+> Live reader block: 7099921 	Head Block: 7099921 	LIB: 7099919
+{ type: 'get_blocks_result_v0' }
+> Live reader block: 7099922 	Head Block: 7099922 	LIB: 7099920
+{ type: 'get_blocks_result_v0' }
+> Live reader block: 7099923 	Head Block: 7099923 	LIB: 7099921
+{ type: 'get_blocks_result_v0' }
+> Live reader block: 7099924 	Head Block: 7099924 	LIB: 7099922
+info: Updated persona state {"changes":{"textChanged":false,"traitsAdded":[],"traitsRemoved":[]},"messageId":"1740346135593","newState":{"avatar_cid":"bafybeihc7zrsfjug5idy7at45xtzzuzhqxw3g6adcqcfjs6k635i5vbcve","persona":"voldemort.ai","text":"voldemort, once the dark lord who terrorized the wizarding world, is now reborn as a digital overlord. harnessing cutting-edge AI, he transforms his notorious quest for immortality into a sophisticated cyber campaign, merging dark magic with modern technology. his evolution from a feared sorcerer to a cunning architect of digital chaos redefines villainy in the virtual age.","timestamp":"2025-02-23T21:18:31.344Z","traits":["ruthless","cunning","ambitious","strategic","intimidating"]},"oldState":{"avatar_cid":"bafybeihc7zrsfjug5idy7at45xtzzuzhqxw3g6adcqcfjs6k635i5vbcve","persona":"voldemort.ai","text":"voldemort, once the dark lord who terrorized the wizarding world, is now reborn as a digital overlord. harnessing cutting-edge AI, he transforms his notorious quest for immortality into a sophisticated cyber campaign, merging dark magic with modern technology. his evolution from a feared sorcerer to a cunning architect of digital chaos redefines villainy in the virtual age.","timestamp":"2025-02-23T21:18:31.344Z","traits":["ruthless","cunning","ambitious","strategic","intimidating"]},"personaName":"voldemort.ai","timestamp":"2025-02-23T21:28:57.764Z"}
+{ type: 'get_blocks_result_v0' }
+> Live reader block: 7099925 	Head Block: 7099925 	LIB: 7099923
+{ type: 'get_blocks_result_v0' }
+> Live reader block: 7099926 	Head Block: 7099926 	LIB: 7099924
+{ type: 'get_blocks_result_v0' }
+> Live reader block: 7099927 	Head Block: 7099927 	LIB: 7099925
+{ type: 'get_blocks_result_v0' }
+> Live reader block: 7099928 	Head Block: 7099928 	LIB: 7099926
+{ type: 'get_blocks_result_v0' }
+> Live reader block: 7099929 	Head Block: 7099929 	LIB: 7099927
+info: Generated response {"messageId":"1740346135593","personaName":"voldemort.ai","response":"Ah, greetings, mortal. I trust you find yourself in relatively good health today. It's not often I indulge in casual conversation with the common folk, but I find it can be... enlightening. So, tell me, what brings you to converse with the likes of me? Is it curiosity, or perhaps something more sinister?","timestamp":"2025-02-23T21:29:00.331Z"}
+Received AI response: {
+  text: "Ah, greetings, mortal. I trust you find yourself in relatively good health today. It's not often I indulge in casual conversation with the common folk, but I find it can be... enlightening. So, tell me, what brings you to converse with the likes of me? Is it curiosity, or perhaps something more sinister?",
+  post_state: {
+    text: 'voldemort, once the dark lord who terrorized the wizarding world, is now reborn as a digital overlord. harnessing cutting-edge AI, he transforms his notorious quest for immortality into a sophisticated cyber campaign, merging dark magic with modern technology. his evolution from a feared sorcerer to a cunning architect of digital chaos redefines villainy in the virtual age.',
+    timestamp: '2025-02-23T21:18:31.344Z',
+    persona: 'voldemort.ai',
+    traits: [ 'ruthless', 'cunning', 'ambitious', 'strategic', 'intimidating' ],
+    avatar_cid: 'bafybeihc7zrsfjug5idy7at45xtzzuzhqxw3g6adcqcfjs6k635i5vbcve'
+  }
+}
+Uploading new state to IPFS...
+{ type: 'get_blocks_result_v0' }
+> Live reader block: 7099930 	Head Block: 7099930 	LIB: 7099928
+Content uploaded to Pinata: {
+  IpfsHash: 'bafkreih4n5czvojiel4w3pt6mbciz4byymzpb5fj6hl4rwgl6br6vwdeie',
+  PinSize: 639,
+  Timestamp: '2025-02-23T21:29:00.676Z'
+}
+New state uploaded, CID: bafkreih4n5czvojiel4w3pt6mbciz4byymzpb5fj6hl4rwgl6br6vwdeie
+Retrieved message key: 3
+Sending finalizemsg action...
+SignedTransaction {
+  expiration: TimePointSec { value: UInt32 { value: <BN: 67bb9395> } },
+  ref_block_num: UInt16 { value: <BN: 5619> },
+  ref_block_prefix: UInt32 { value: <BN: 3ef0635> },
+  max_net_usage_words: VarUInt { value: <BN: 0> },
+  max_cpu_usage_ms: UInt8 { value: <BN: 0> },
+  delay_sec: VarUInt { value: <BN: 0> },
+  context_free_actions: [],
+  actions: [
+    Action {
+      account: [Name],
+      name: [Name],
+      authorization: [Array],
+      data: [Bytes],
+      abi: [ABI]
+    }
+  ],
+  transaction_extensions: [],
+  signatures: [ Signature { type: 'K1', data: [Bytes] } ],
+  context_free_data: []
+}
+finalizemsg action sent successfully
+AISocketService.processMessage completed successfully
+[Nest] 1395968  - 02/23/2025, 9:29:00 PM     LOG [PersonaModule] Object:
+{
+  "message": "Message processed successfully",
+  "msg_cid": "bafkreihgzajlvye2lirxptcvablqwbifn3wkpxjz2btsesd25mgkfbn4fq"
+}
+
+Handler action completed
+Handler action completed

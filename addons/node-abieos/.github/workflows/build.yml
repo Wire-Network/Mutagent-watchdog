@@ -1,0 +1,34 @@
+name: Node.js Addon with CMake
+
+on:
+  push:
+    branches: [ "master", "3.3-staging" ]
+  pull_request:
+    branches: [ "master" ]
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    # Checkout repo and submodules
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    # Setup Node.js
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build:linux:ci
+    - run: npm run build:tsc
+    - run: npm run test

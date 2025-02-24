@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+.vscode
+dist/
+dist-web/
+node_modules/
+docs-build/
+*.tgz
+.github/**/*.wasm
+.github/**/*.abi

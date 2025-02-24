@@ -1,0 +1,43 @@
+{
+  "name": "@eosrio/node-abieos",
+  "version": "3.3.2",
+  "description": "Node Bindings for abieos: Binary <> JSON conversion using ABIs.",
+  "main": "./lib/abieos.js",
+  "types": "./lib/abieos.d.ts",
+  "exports": {
+    ".": {
+      "require": "./lib/abieos.js",
+      "types": "./lib/abieos.d.ts"
+    }
+  },
+  "scripts": {
+    "install": "node -e 'process.exit(0)'",
+    "test": "cd examples && node basic.mjs",
+    "tsc:watch": "tsc --watch",
+    "clean": "cmake-js clean",
+    "bundle": "tsup lib/abieos.ts --format cjs,esm --dts --clean",
+    "build:tsc": "tsc",
+    "build:linux": "cmake-js compile --cc /usr/bin/clang-18 --cxx /usr/bin/clang++-18 && cp build/Release/node_abieos.node lib/abieos.node",
+    "build:linux:ci": "cmake-js compile && cp build/Release/node_abieos.node lib/abieos.node",
+    "build:win": "cmake-js"
+  },
+  "author": "Wire Network",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "cmake-js": "7.3.0",
+    "node-addon-api": "8.0.0",
+    "tsup": "^8.0.2",
+    "typescript": "5.4.5"
+  },
+  "binary": {
+    "napi_versions": [
+      9
+    ]
+  },
+  "cmake-js": {
+    "runtime": "node",
+    "runtimeVersion": "20.0.0",
+    "arch": "x64"
+  }
+}
